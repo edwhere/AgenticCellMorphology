@@ -114,3 +114,11 @@ uv run pytest
 ```
 
 The tests use pydantic-ai's `TestModel`, so they make no API calls.
+
+## Code development
+
+The author of this repository and Claude discussed project requirements and objectives. 
+Claude proposed a plan for code development. After a few iterations for 
+plan improvements, the plan was approved by the author. Claude used the 
+approved plan and generated all the necessary code.
+
