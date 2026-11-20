@@ -13,3 +13,7 @@ wheels/
 outputs/
 .pytest_cache/
 .DS_Store
+
+# Dev environments
+.idea/
+.vscode/
