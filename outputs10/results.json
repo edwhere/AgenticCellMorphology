@@ -1,0 +1,1236 @@
+{
+  "request": {
+    "csv_path": "data/cbc_10feats.csv",
+    "features": [
+      "radius",
+      "texture",
+      "perimeter",
+      "area",
+      "smoothness",
+      "compactness",
+      "concavity",
+      "concave_points",
+      "symmetry",
+      "fractal_dim"
+    ],
+    "target": "dx"
+  },
+  "eda": {
+    "n_rows": 568,
+    "n_features": 10,
+    "target": "dx",
+    "target_distribution": {
+      "B": 357,
+      "M": 211
+    },
+    "feature_stats": [
+      {
+        "name": "radius",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 456,
+        "mean": 14.120491,
+        "std": 3.523416,
+        "min": 6.981,
+        "q25": 11.6975,
+        "median": 13.355,
+        "q75": 15.78,
+        "max": 28.11,
+        "skew": 0.948035,
+        "top_categories": null
+      },
+      {
+        "name": "texture",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 478,
+        "mean": 19.305335,
+        "std": 4.288506,
+        "min": 9.71,
+        "q25": 16.1775,
+        "median": 18.855,
+        "q75": 21.8025,
+        "max": 39.28,
+        "skew": 0.662188,
+        "top_categories": null
+      },
+      {
+        "name": "perimeter",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 521,
+        "mean": 91.914754,
+        "std": 24.285848,
+        "min": 43.79,
+        "q25": 75.135,
+        "median": 86.21,
+        "q75": 103.875,
+        "max": 188.5,
+        "skew": 0.997122,
+        "top_categories": null
+      },
+      {
+        "name": "area",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 538,
+        "mean": 654.279754,
+        "std": 351.923751,
+        "min": 143.5,
+        "q25": 420.175,
+        "median": 548.75,
+        "q75": 782.625,
+        "max": 2501.0,
+        "skew": 1.652039,
+        "top_categories": null
+      },
+      {
+        "name": "smoothness",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 473,
+        "mean": 0.096321,
+        "std": 0.014046,
+        "min": 0.05263,
+        "q25": 0.08629,
+        "median": 0.095865,
+        "q75": 0.1053,
+        "max": 0.1634,
+        "skew": 0.460382,
+        "top_categories": null
+      },
+      {
+        "name": "compactness",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 536,
+        "mean": 0.104036,
+        "std": 0.052355,
+        "min": 0.01938,
+        "q25": 0.064815,
+        "median": 0.092525,
+        "q75": 0.1304,
+        "max": 0.3454,
+        "skew": 1.177156,
+        "top_categories": null
+      },
+      {
+        "name": "concavity",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 536,
+        "mean": 0.088427,
+        "std": 0.079294,
+        "min": 0.0,
+        "q25": 0.02954,
+        "median": 0.0614,
+        "q75": 0.12965,
+        "max": 0.4268,
+        "skew": 1.407016,
+        "top_categories": null
+      },
+      {
+        "name": "concave_points",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 542,
+        "mean": 0.048746,
+        "std": 0.038617,
+        "min": 0.0,
+        "q25": 0.02031,
+        "median": 0.033455,
+        "q75": 0.07373,
+        "max": 0.2012,
+        "skew": 1.174648,
+        "top_categories": null
+      },
+      {
+        "name": "symmetry",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 431,
+        "mean": 0.181055,
+        "std": 0.027319,
+        "min": 0.106,
+        "q25": 0.1619,
+        "median": 0.1792,
+        "q75": 0.195625,
+        "max": 0.304,
+        "skew": 0.726826,
+        "top_categories": null
+      },
+      {
+        "name": "fractal_dim",
+        "kind": "numeric",
+        "count": 568,
+        "missing": 0,
+        "n_unique": 498,
+        "mean": 0.06277,
+        "std": 0.007035,
+        "min": 0.04996,
+        "q25": 0.057697,
+        "median": 0.061515,
+        "q75": 0.06612,
+        "max": 0.09744,
+        "skew": 1.312567,
+        "top_categories": null
+      }
+    ],
+    "correlation_method": "pearson",
+    "correlation_threshold": 0.8,
+    "correlation_matrix": {
+      "radius": {
+        "radius": 1.0,
+        "texture": 0.3294,
+        "perimeter": 0.9979,
+        "area": 0.9873,
+        "smoothness": 0.1681,
+        "compactness": 0.5051,
+        "concavity": 0.6766,
+        "concave_points": 0.8232,
+        "symmetry": 0.1442,
+        "fractal_dim": -0.3177
+      },
+      "texture": {
+        "radius": 0.3294,
+        "texture": 1.0,
+        "perimeter": 0.3359,
+        "area": 0.3262,
+        "smoothness": -0.0178,
+        "compactness": 0.252,
+        "concavity": 0.3152,
+        "concave_points": 0.3056,
+        "symmetry": 0.0801,
+        "fractal_dim": -0.0688
+      },
+      "perimeter": {
+        "radius": 0.9979,
+        "texture": 0.3359,
+        "perimeter": 1.0,
+        "area": 0.9865,
+        "smoothness": 0.2045,
+        "compactness": 0.5557,
+        "concavity": 0.7157,
+        "concave_points": 0.8513,
+        "symmetry": 0.1791,
+        "fractal_dim": -0.2681
+      },
+      "area": {
+        "radius": 0.9873,
+        "texture": 0.3262,
+        "perimeter": 0.9865,
+        "area": 1.0,
+        "smoothness": 0.1748,
+        "compactness": 0.498,
+        "concavity": 0.6862,
+        "concave_points": 0.8242,
+        "symmetry": 0.1482,
+        "fractal_dim": -0.2886
+      },
+      "smoothness": {
+        "radius": 0.1681,
+        "texture": -0.0178,
+        "perimeter": 0.2045,
+        "area": 0.1748,
+        "smoothness": 1.0,
+        "compactness": 0.6577,
+        "concavity": 0.519,
+        "concave_points": 0.551,
+        "symmetry": 0.5553,
+        "fractal_dim": 0.5824
+      },
+      "compactness": {
+        "radius": 0.5051,
+        "texture": 0.252,
+        "perimeter": 0.5557,
+        "area": 0.498,
+        "smoothness": 0.6577,
+        "compactness": 1.0,
+        "concavity": 0.8816,
+        "concave_points": 0.8291,
+        "symmetry": 0.5981,
+        "fractal_dim": 0.5602
+      },
+      "concavity": {
+        "radius": 0.6766,
+        "texture": 0.3152,
+        "perimeter": 0.7157,
+        "area": 0.6862,
+        "smoothness": 0.519,
+        "compactness": 0.8816,
+        "concavity": 1.0,
+        "concave_points": 0.9205,
+        "symmetry": 0.4955,
+        "fractal_dim": 0.3298
+      },
+      "concave_points": {
+        "radius": 0.8232,
+        "texture": 0.3056,
+        "perimeter": 0.8513,
+        "area": 0.8242,
+        "smoothness": 0.551,
+        "compactness": 0.8291,
+        "concavity": 0.9205,
+        "concave_points": 1.0,
+        "symmetry": 0.4572,
+        "fractal_dim": 0.1585
+      },
+      "symmetry": {
+        "radius": 0.1442,
+        "texture": 0.0801,
+        "perimeter": 0.1791,
+        "area": 0.1482,
+        "smoothness": 0.5553,
+        "compactness": 0.5981,
+        "concavity": 0.4955,
+        "concave_points": 0.4572,
+        "symmetry": 1.0,
+        "fractal_dim": 0.4753
+      },
+      "fractal_dim": {
+        "radius": -0.3177,
+        "texture": -0.0688,
+        "perimeter": -0.2681,
+        "area": -0.2886,
+        "smoothness": 0.5824,
+        "compactness": 0.5602,
+        "concavity": 0.3298,
+        "concave_points": 0.1585,
+        "symmetry": 0.4753,
+        "fractal_dim": 1.0
+      }
+    },
+    "correlated_pairs": [
+      {
+        "feature_a": "radius",
+        "feature_b": "perimeter",
+        "r": 0.9979
+      },
+      {
+        "feature_a": "radius",
+        "feature_b": "area",
+        "r": 0.9873
+      },
+      {
+        "feature_a": "perimeter",
+        "feature_b": "area",
+        "r": 0.9865
+      },
+      {
+        "feature_a": "concavity",
+        "feature_b": "concave_points",
+        "r": 0.9205
+      },
+      {
+        "feature_a": "compactness",
+        "feature_b": "concavity",
+        "r": 0.8816
+      },
+      {
+        "feature_a": "perimeter",
+        "feature_b": "concave_points",
+        "r": 0.8513
+      },
+      {
+        "feature_a": "compactness",
+        "feature_b": "concave_points",
+        "r": 0.8291
+      },
+      {
+        "feature_a": "area",
+        "feature_b": "concave_points",
+        "r": 0.8242
+      },
+      {
+        "feature_a": "radius",
+        "feature_b": "concave_points",
+        "r": 0.8232
+      }
+    ],
+    "figures": [
+      "outputs/figures/correlation_heatmap.png",
+      "outputs/figures/features_by_target.png",
+      "outputs/figures/feature_distributions.png"
+    ],
+    "notes": [
+      "No missing values in any of the 568 rows; all 10 features are numeric with complete counts.",
+      "Class balance is 357 B vs 211 M (about 63% benign), a moderate imbalance that should be kept in mind for modelling and evaluation.",
+      "Size features are strongly collinear: radius vs perimeter r=0.9979, radius vs area r=0.9873, perimeter vs area r=0.9865, so they carry largely redundant information.",
+      "Concavity family is also tightly linked: concavity vs concave_points r=0.9205, compactness vs concavity r=0.8816, perimeter vs concave_points r=0.8513, making it reasonable to drop or combine some of these.",
+      "Right skew is pronounced for area (skew 1.652), fractal_dim (1.313), concavity (1.407), compactness (1.177) and concave_points (1.175), with max values well above the upper quartiles, suggesting long right tails and possible outliers.",
+      "Smoothness (skew 0.460) and symmetry (0.727) are close to symmetric and have narrow ranges (smoothness std 0.014, symmetry std 0.027), so they vary less in absolute terms.",
+      "Concavity has a minimum of 0.0, so some samples have no measured concavity; the features-by-target box plots are the place to check which features separate the B and M classes."
+    ]
+  },
+  "selection": {
+    "threshold": 0.8,
+    "method": "pearson",
+    "kept": [
+      "texture",
+      "area",
+      "smoothness",
+      "compactness",
+      "symmetry",
+      "fractal_dim"
+    ],
+    "dropped": [
+      {
+        "feature": "concave_points",
+        "correlated_with": "concavity",
+        "r": 0.9197,
+        "reason": "|r|=0.92 with concavity; highest mean |r| to the other features (0.58); target association 0.78 vs 0.69 for concavity"
+      },
+      {
+        "feature": "concavity",
+        "correlated_with": "compactness",
+        "r": 0.8847,
+        "reason": "|r|=0.88 with compactness; highest mean |r| to the other features (0.52); target association 0.69 vs 0.61 for compactness"
+      },
+      {
+        "feature": "perimeter",
+        "correlated_with": "radius",
+        "r": 0.9979,
+        "reason": "|r|=1.00 with radius; highest mean |r| to the other features (0.44); target association 0.74 vs 0.72 for radius"
+      },
+      {
+        "feature": "radius",
+        "correlated_with": "area",
+        "r": 0.9869,
+        "reason": "|r|=0.99 with area; highest mean |r| to the other features (0.35); target association 0.72 vs 0.70 for area"
+      }
+    ]
+  },
+  "runs": [
+    {
+      "run_name": "all_features",
+      "features_used": [
+        "radius",
+        "texture",
+        "perimeter",
+        "area",
+        "smoothness",
+        "compactness",
+        "concavity",
+        "concave_points",
+        "symmetry",
+        "fractal_dim"
+      ],
+      "classes": [
+        "B",
+        "M"
+      ],
+      "n_train": 454,
+      "n_validation": 114,
+      "baseline_accuracy": 0.6316,
+      "cv": {
+        "n_folds": 5,
+        "accuracy": {
+          "mean": 0.9383,
+          "std": 0.0126,
+          "folds": [
+            0.9451,
+            0.9341,
+            0.9231,
+            0.956,
+            0.9333
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.9857,
+          "std": 0.0083,
+          "folds": [
+            0.9866,
+            0.9721,
+            0.9881,
+            0.9948,
+            0.9867
+          ]
+        }
+      },
+      "validation": {
+        "accuracy": 0.9386,
+        "balanced_accuracy": 0.9415,
+        "precision_macro": 0.93,
+        "recall_macro": 0.9415,
+        "f1_macro": 0.9349,
+        "roc_auc": 0.9858,
+        "labels": [
+          "B",
+          "M"
+        ],
+        "confusion_matrix": [
+          [
+            67,
+            5
+          ],
+          [
+            2,
+            40
+          ]
+        ]
+      },
+      "coefficients": [
+        {
+          "term": "concave_points",
+          "feature": "concave_points",
+          "class_label": "M",
+          "coef": 1.8078
+        },
+        {
+          "term": "texture",
+          "feature": "texture",
+          "class_label": "M",
+          "coef": 1.4378
+        },
+        {
+          "term": "smoothness",
+          "feature": "smoothness",
+          "class_label": "M",
+          "coef": 1.2352
+        },
+        {
+          "term": "area",
+          "feature": "area",
+          "class_label": "M",
+          "coef": 1.1267
+        },
+        {
+          "term": "radius",
+          "feature": "radius",
+          "class_label": "M",
+          "coef": 0.978
+        },
+        {
+          "term": "perimeter",
+          "feature": "perimeter",
+          "class_label": "M",
+          "coef": 0.9043
+        },
+        {
+          "term": "concavity",
+          "feature": "concavity",
+          "class_label": "M",
+          "coef": 0.8748
+        },
+        {
+          "term": "fractal_dim",
+          "feature": "fractal_dim",
+          "class_label": "M",
+          "coef": -0.4086
+        },
+        {
+          "term": "symmetry",
+          "feature": "symmetry",
+          "class_label": "M",
+          "coef": 0.2431
+        },
+        {
+          "term": "compactness",
+          "feature": "compactness",
+          "class_label": "M",
+          "coef": -0.2145
+        }
+      ],
+      "shap": {
+        "method": "shap.LinearExplainer (interventional, training-set background)",
+        "output_space": "log-odds",
+        "explained_classes": [
+          "M"
+        ],
+        "global_importance": [
+          {
+            "feature": "concave_points",
+            "mean_abs_shap": 1.4011,
+            "share": 0.1946,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "texture",
+            "mean_abs_shap": 1.1897,
+            "share": 0.1652,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "smoothness",
+            "mean_abs_shap": 0.9466,
+            "share": 0.1315,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "area",
+            "mean_abs_shap": 0.8745,
+            "share": 0.1215,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "radius",
+            "mean_abs_shap": 0.7955,
+            "share": 0.1105,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "perimeter",
+            "mean_abs_shap": 0.7257,
+            "share": 0.1008,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "concavity",
+            "mean_abs_shap": 0.6252,
+            "share": 0.0868,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "fractal_dim",
+            "mean_abs_shap": 0.3086,
+            "share": 0.0429,
+            "direction_by_class": {
+              "M": -1.0
+            }
+          },
+          {
+            "feature": "symmetry",
+            "mean_abs_shap": 0.1768,
+            "share": 0.0245,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "compactness",
+            "mean_abs_shap": 0.1568,
+            "share": 0.0218,
+            "direction_by_class": {
+              "M": -1.0
+            }
+          }
+        ],
+        "local_explanations": [
+          {
+            "row_index": 179,
+            "kind": "confident correct",
+            "true_label": "M",
+            "predicted_label": "M",
+            "predicted_probability": 1.0,
+            "explained_class": "M",
+            "base_value": -0.5721,
+            "top_contributions": [
+              {
+                "feature": "concave_points",
+                "value": "0.1878",
+                "percentile": 99.6,
+                "shap": 6.4373
+              },
+              {
+                "feature": "area",
+                "value": "2250",
+                "percentile": 99.6,
+                "shap": 5.1367
+              },
+              {
+                "feature": "radius",
+                "value": "27.22",
+                "percentile": 99.6,
+                "shap": 3.6637
+              },
+              {
+                "feature": "perimeter",
+                "value": "182.1",
+                "percentile": 99.6,
+                "shap": 3.3719
+              },
+              {
+                "feature": "concavity",
+                "value": "0.2871",
+                "percentile": 96.9,
+                "shap": 2.1405
+              }
+            ]
+          },
+          {
+            "row_index": 374,
+            "kind": "borderline",
+            "true_label": "B",
+            "predicted_label": "B",
+            "predicted_probability": 0.5201,
+            "explained_class": "M",
+            "base_value": -0.5721,
+            "top_contributions": [
+              {
+                "feature": "texture",
+                "value": "16.07",
+                "percentile": 23.1,
+                "shap": -1.1249
+              },
+              {
+                "feature": "radius",
+                "value": "16.17",
+                "percentile": 77.5,
+                "shap": 0.5765
+              },
+              {
+                "feature": "perimeter",
+                "value": "106.3",
+                "percentile": 76.9,
+                "shap": 0.5403
+              },
+              {
+                "feature": "area",
+                "value": "788.5",
+                "percentile": 76.0,
+                "shap": 0.4356
+              },
+              {
+                "feature": "concave_points",
+                "value": "0.05397",
+                "percentile": 64.3,
+                "shap": 0.2431
+              }
+            ]
+          },
+          {
+            "row_index": 39,
+            "kind": "confident misclassification",
+            "true_label": "M",
+            "predicted_label": "B",
+            "predicted_probability": 0.9596,
+            "explained_class": "M",
+            "base_value": -0.5721,
+            "top_contributions": [
+              {
+                "feature": "concave_points",
+                "value": "0.02031",
+                "percentile": 25.8,
+                "shap": -1.3148
+              },
+              {
+                "feature": "smoothness",
+                "value": "0.08162",
+                "percentile": 15.4,
+                "shap": -1.2626
+              },
+              {
+                "feature": "texture",
+                "value": "21.58",
+                "percentile": 72.7,
+                "shap": 0.7408
+              },
+              {
+                "feature": "concavity",
+                "value": "0.0311",
+                "percentile": 27.3,
+                "shap": -0.6253
+              },
+              {
+                "feature": "fractal_dim",
+                "value": "0.05587",
+                "percentile": 12.8,
+                "shap": 0.4042
+              }
+            ]
+          },
+          {
+            "row_index": 127,
+            "kind": "misclassified",
+            "true_label": "B",
+            "predicted_label": "M",
+            "predicted_probability": 0.9181,
+            "explained_class": "M",
+            "base_value": -0.5721,
+            "top_contributions": [
+              {
+                "feature": "concave_points",
+                "value": "0.08534",
+                "percentile": 81.1,
+                "shap": 1.695
+              },
+              {
+                "feature": "smoothness",
+                "value": "0.115",
+                "percentile": 90.7,
+                "shap": 1.6629
+              },
+              {
+                "feature": "texture",
+                "value": "16.39",
+                "percentile": 25.3,
+                "shap": -1.0165
+              },
+              {
+                "feature": "compactness",
+                "value": "0.1807",
+                "percentile": 91.4,
+                "shap": -0.31
+              },
+              {
+                "feature": "perimeter",
+                "value": "99.58",
+                "percentile": 71.1,
+                "shap": 0.2892
+              }
+            ]
+          }
+        ],
+        "figures": [
+          "outputs/figures/all_features_shap_importance.png",
+          "outputs/figures/all_features_shap_beeswarm.png"
+        ]
+      },
+      "notes": [
+        "Validation accuracy is 0.9386 (107 of 114 correct), against a majority-class baseline of 0.6316, so the model beats the baseline by about 31 points. Balanced accuracy is 0.9415 and ROC-AUC is 0.9858.",
+        "Cross-validation on the 454 training rows gives mean accuracy 0.9383 with std 0.0126 (folds from 0.9231 to 0.956) and mean ROC-AUC 0.9857 with std 0.0083. The validation accuracy sits right at the CV mean, so performance looks stable and not overfit to one split.",
+        "The confusion matrix is [[67,5],[2,40]] with labels B then M: 5 benign cases were called malignant and 2 malignant cases were missed. Errors are slightly more often false alarms than missed cancers.",
+        "The strongest drivers of malignancy (class M) are concave_points (coef 1.8078, mean |SHAP| 1.4011), texture (coef 1.4378, mean |SHAP| 1.1897), smoothness (coef 1.2352) and area (coef 1.1267). Higher values of each push predictions toward M.",
+        "fractal_dim (coef -0.4086) and compactness (coef -0.2145) push toward benign, and symmetry has a small positive effect (coef 0.2431). Compactness and symmetry matter little overall, with SHAP shares of 0.0218 and 0.0245."
+      ]
+    },
+    {
+      "run_name": "uncorrelated_features",
+      "features_used": [
+        "texture",
+        "area",
+        "smoothness",
+        "compactness",
+        "symmetry",
+        "fractal_dim"
+      ],
+      "classes": [
+        "B",
+        "M"
+      ],
+      "n_train": 454,
+      "n_validation": 114,
+      "baseline_accuracy": 0.6316,
+      "cv": {
+        "n_folds": 5,
+        "accuracy": {
+          "mean": 0.9361,
+          "std": 0.0197,
+          "folds": [
+            0.9231,
+            0.956,
+            0.9121,
+            0.956,
+            0.9333
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.9805,
+          "std": 0.009,
+          "folds": [
+            0.9819,
+            0.9659,
+            0.9814,
+            0.9907,
+            0.9825
+          ]
+        }
+      },
+      "validation": {
+        "accuracy": 0.9298,
+        "balanced_accuracy": 0.9246,
+        "precision_macro": 0.9246,
+        "recall_macro": 0.9246,
+        "f1_macro": 0.9246,
+        "roc_auc": 0.9818,
+        "labels": [
+          "B",
+          "M"
+        ],
+        "confusion_matrix": [
+          [
+            68,
+            4
+          ],
+          [
+            4,
+            38
+          ]
+        ]
+      },
+      "coefficients": [
+        {
+          "term": "area",
+          "feature": "area",
+          "class_label": "M",
+          "coef": 3.4117
+        },
+        {
+          "term": "compactness",
+          "feature": "compactness",
+          "class_label": "M",
+          "coef": 1.3253
+        },
+        {
+          "term": "texture",
+          "feature": "texture",
+          "class_label": "M",
+          "coef": 1.2963
+        },
+        {
+          "term": "smoothness",
+          "feature": "smoothness",
+          "class_label": "M",
+          "coef": 1.2261
+        },
+        {
+          "term": "fractal_dim",
+          "feature": "fractal_dim",
+          "class_label": "M",
+          "coef": -0.6595
+        },
+        {
+          "term": "symmetry",
+          "feature": "symmetry",
+          "class_label": "M",
+          "coef": 0.3692
+        }
+      ],
+      "shap": {
+        "method": "shap.LinearExplainer (interventional, training-set background)",
+        "output_space": "log-odds",
+        "explained_classes": [
+          "M"
+        ],
+        "global_importance": [
+          {
+            "feature": "area",
+            "mean_abs_shap": 2.6481,
+            "share": 0.414,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "texture",
+            "mean_abs_shap": 1.0726,
+            "share": 0.1677,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "compactness",
+            "mean_abs_shap": 0.9686,
+            "share": 0.1515,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "smoothness",
+            "mean_abs_shap": 0.9397,
+            "share": 0.1469,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          },
+          {
+            "feature": "fractal_dim",
+            "mean_abs_shap": 0.4981,
+            "share": 0.0779,
+            "direction_by_class": {
+              "M": -1.0
+            }
+          },
+          {
+            "feature": "symmetry",
+            "mean_abs_shap": 0.2684,
+            "share": 0.042,
+            "direction_by_class": {
+              "M": 1.0
+            }
+          }
+        ],
+        "local_explanations": [
+          {
+            "row_index": 179,
+            "kind": "confident correct",
+            "true_label": "M",
+            "predicted_label": "M",
+            "predicted_probability": 1.0,
+            "explained_class": "M",
+            "base_value": -0.6296,
+            "top_contributions": [
+              {
+                "feature": "area",
+                "value": "2250",
+                "percentile": 99.6,
+                "shap": 15.5541
+              },
+              {
+                "feature": "compactness",
+                "value": "0.1914",
+                "percentile": 92.7,
+                "shap": 2.181
+              },
+              {
+                "feature": "smoothness",
+                "value": "0.1094",
+                "percentile": 83.9,
+                "shap": 1.1635
+              },
+              {
+                "feature": "texture",
+                "value": "21.87",
+                "percentile": 75.1,
+                "shap": 0.7564
+              },
+              {
+                "feature": "fractal_dim",
+                "value": "0.0577",
+                "percentile": 25.6,
+                "shap": 0.4788
+              }
+            ]
+          },
+          {
+            "row_index": 4,
+            "kind": "borderline",
+            "true_label": "M",
+            "predicted_label": "M",
+            "predicted_probability": 0.5103,
+            "explained_class": "M",
+            "base_value": -0.6296,
+            "top_contributions": [
+              {
+                "feature": "smoothness",
+                "value": "0.1278",
+                "percentile": 98.0,
+                "shap": 2.7643
+              },
+              {
+                "feature": "area",
+                "value": "477.1",
+                "percentile": 37.0,
+                "shap": -1.7141
+              },
+              {
+                "feature": "compactness",
+                "value": "0.17",
+                "percentile": 90.1,
+                "shap": 1.6494
+              },
+              {
+                "feature": "fractal_dim",
+                "value": "0.07613",
+                "percentile": 94.9,
+                "shap": -1.2696
+              },
+              {
+                "feature": "texture",
+                "value": "15.7",
+                "percentile": 19.8,
+                "shap": -1.1271
+              }
+            ]
+          },
+          {
+            "row_index": 39,
+            "kind": "confident misclassification",
+            "true_label": "M",
+            "predicted_label": "B",
+            "predicted_probability": 0.9278,
+            "explained_class": "M",
+            "base_value": -0.6296,
+            "top_contributions": [
+              {
+                "feature": "smoothness",
+                "value": "0.08162",
+                "percentile": 15.4,
+                "shap": -1.2533
+              },
+              {
+                "feature": "compactness",
+                "value": "0.06031",
+                "percentile": 21.6,
+                "shap": -1.0757
+              },
+              {
+                "feature": "area",
+                "value": "563",
+                "percentile": 52.4,
+                "shap": -0.8774
+              },
+              {
+                "feature": "texture",
+                "value": "21.58",
+                "percentile": 72.7,
+                "shap": 0.6679
+              },
+              {
+                "feature": "fractal_dim",
+                "value": "0.05587",
+                "percentile": 12.8,
+                "shap": 0.6524
+              }
+            ]
+          },
+          {
+            "row_index": 127,
+            "kind": "misclassified",
+            "true_label": "B",
+            "predicted_label": "M",
+            "predicted_probability": 0.9088,
+            "explained_class": "M",
+            "base_value": -0.6296,
+            "top_contributions": [
+              {
+                "feature": "compactness",
+                "value": "0.1807",
+                "percentile": 91.4,
+                "shap": 1.9152
+              },
+              {
+                "feature": "smoothness",
+                "value": "0.115",
+                "percentile": 90.7,
+                "shap": 1.6507
+              },
+              {
+                "feature": "texture",
+                "value": "16.39",
+                "percentile": 25.3,
+                "shap": -0.9165
+              },
+              {
+                "feature": "symmetry",
+                "value": "0.2001",
+                "percentile": 79.5,
+                "shap": 0.2529
+              },
+              {
+                "feature": "area",
+                "value": "674.5",
+                "percentile": 67.2,
+                "shap": 0.2086
+              }
+            ]
+          }
+        ],
+        "figures": [
+          "outputs/figures/uncorrelated_features_shap_importance.png",
+          "outputs/figures/uncorrelated_features_shap_beeswarm.png"
+        ]
+      },
+      "notes": [
+        "Validation accuracy is 0.9298 (106 of 114 correct) against a majority-class baseline of 0.6316, a gain of about 30 points. Balanced accuracy is 0.9246 and ROC-AUC is 0.9818, so performance holds for both classes.",
+        "Cross-validation on the 454 training rows gives mean accuracy 0.9361 with std 0.0197 (folds 0.9121 to 0.956), and mean ROC-AUC 0.9805 with std 0.009. The validation accuracy of 0.9298 sits within that spread, so the estimate looks stable.",
+        "The validation confusion matrix is [[68,4],[4,38]], so there are 4 false positives and 4 false negatives. Errors are symmetric across the two classes.",
+        "Area is the dominant feature: it has the largest coefficient (3.4117 for M) and accounts for about 41.4% of mean absolute SHAP. Larger area pushes predictions toward malignant (M).",
+        "Texture (coef 1.2963), compactness (1.3253) and smoothness (1.2261) also push toward M and together account for roughly 47% of SHAP importance. Fractal_dim has a negative coefficient (-0.6595), so higher values push toward benign (B); symmetry contributes least (0.3692)."
+      ]
+    }
+  ],
+  "comparison": {
+    "full_run": "all_features",
+    "reduced_run": "uncorrelated_features",
+    "dropped_features": [
+      "concave_points",
+      "concavity",
+      "perimeter",
+      "radius"
+    ],
+    "cv_accuracy_full": 0.9383,
+    "cv_accuracy_reduced": 0.9361,
+    "cv_accuracy_diff": -0.0022,
+    "cv_accuracy_fold_diffs": [
+      -0.022,
+      0.0219,
+      -0.011,
+      0.0,
+      0.0
+    ],
+    "cv_auc_diff": -0.0052,
+    "val_accuracy_diff": -0.0088,
+    "val_auc_diff": -0.004,
+    "importance_shift": [
+      {
+        "feature": "concave_points",
+        "share_full": 0.1946,
+        "share_reduced": null
+      },
+      {
+        "feature": "texture",
+        "share_full": 0.1652,
+        "share_reduced": 0.1677
+      },
+      {
+        "feature": "smoothness",
+        "share_full": 0.1315,
+        "share_reduced": 0.1469
+      },
+      {
+        "feature": "area",
+        "share_full": 0.1215,
+        "share_reduced": 0.414
+      },
+      {
+        "feature": "radius",
+        "share_full": 0.1105,
+        "share_reduced": null
+      },
+      {
+        "feature": "perimeter",
+        "share_full": 0.1008,
+        "share_reduced": null
+      },
+      {
+        "feature": "concavity",
+        "share_full": 0.0868,
+        "share_reduced": null
+      },
+      {
+        "feature": "fractal_dim",
+        "share_full": 0.0429,
+        "share_reduced": 0.0779
+      },
+      {
+        "feature": "symmetry",
+        "share_full": 0.0245,
+        "share_reduced": 0.042
+      },
+      {
+        "feature": "compactness",
+        "share_full": 0.0218,
+        "share_reduced": 0.1515
+      }
+    ]
+  },
+  "final": {
+    "markdown": "# Classification report: diagnosis (dx) from 10 cell-nucleus features\n\n## 1. Data overview\n- 568 rows, 10 numeric features, no missing values. Target dx has 357 B (benign) and 211 M (malignant), about 63% benign, a moderate imbalance.\n- Right skew is pronounced for area (skew 1.652), concavity (1.407), fractal_dim (1.313), concave_points (1.175) and compactness (1.177). Smoothness (0.460) and symmetry (0.727) are closer to symmetric.\n- Concavity has a minimum of 0.0, so some samples have no measured concavity.\n- Figures: outputs/figures/feature_distributions.png and outputs/figures/features_by_target.png.\n\n## 2. Correlated features\nThe threshold was |r| >= 0.8 (Pearson). Nine pairs exceed it:\n- Size family: radius vs perimeter 0.9979, radius vs area 0.9873, perimeter vs area 0.9865.\n- Concavity family: concavity vs concave_points 0.9205, compactness vs concavity 0.8816, perimeter vs concave_points 0.8513, compactness vs concave_points 0.8291, area vs concave_points 0.8242, radius vs concave_points 0.8232.\n- The feature-selection table reports slightly different values for some pairs (radius vs area 0.9869, concave_points vs concavity 0.9197, concavity vs compactness 0.8847). These differ from the matrix by under 0.003 and do not change any decision.\n- See outputs/figures/correlation_heatmap.png.\n\n## 3. Model performance\nMajority-class baseline accuracy is 0.6316.\n\n| Run | Features | CV accuracy (mean ± std) | CV ROC-AUC (mean ± std) | Validation accuracy | Validation ROC-AUC |\n|---|---|---|---|---|---|\n| all_features | 10 | 0.9383 ± 0.0126 | 0.9857 ± 0.0083 | 0.9386 | 0.9858 |\n| uncorrelated_features | 6 | 0.9361 ± 0.0197 | 0.9805 ± 0.0090 | 0.9298 | 0.9818 |\n\n- Validation balanced accuracy is 0.9415 for all_features and 0.9246 for uncorrelated_features.\n- Both runs beat the baseline by about 30 points. Validation accuracy sits at or within the CV spread for both runs, so CV and validation agree.\n- Confusion matrices (rows B, M; columns predicted B, M): all_features [[67,5],[2,40]]; uncorrelated_features [[68,4],[4,38]].\n\n## 4. Full vs. uncorrelated features\n- Differences (uncorrelated minus full): CV accuracy -0.0022, CV AUC -0.0052, validation accuracy -0.0088, validation AUC -0.0040.\n- Per-fold accuracy differences are -0.022, +0.0219, -0.011, 0.0 and 0.0. The signs are mixed and the magnitudes are within fold-to-fold noise, so removing the correlated features does not clearly hurt or help accuracy.\n- Dropped features: concave_points, concavity, perimeter and radius. Each was removed for high correlation with a retained feature and a high mean |r| to the others.\n- SHAP importance shifted. In the full run, concave_points (0.1946), radius (0.1105), perimeter (0.1008) and concavity (0.0868) shared the credit that is now concentrated elsewhere. Area's share rose from 0.1215 to 0.414, and compactness's share rose from 0.0218 to 0.1515. Texture (0.1652 to 0.1677), smoothness (0.1315 to 0.1469), fractal_dim (0.0429 to 0.0779) and symmetry (0.0245 to 0.042) changed little.\n- Recommendation: all_features. It has higher CV accuracy and AUC and higher validation accuracy and AUC, and its CV standard deviation is lower (0.0126 vs 0.0197). The uncorrelated run is more parsimonious (6 features) and its attributions are easier to read because credit is not split among collinear features. If interpretability matters more than the small accuracy gain, uncorrelated_features is a defensible alternative.\n- Figures: outputs/figures/all_features_shap_importance.png, outputs/figures/uncorrelated_features_shap_importance.png and the matching beeswarm plots.\n\n## 5. What drives the predictions\nFrom the recommended run (all_features), mean absolute SHAP in log-odds for class M:\n1. concave_points: 1.4011 (share 0.1946), higher values push toward M.\n2. texture: 1.1897 (0.1652), higher values push toward M.\n3. smoothness: 0.9466 (0.1315), higher values push toward M.\n4. area: 0.8745 (0.1215), higher values push toward M.\n5. radius: 0.7955 (0.1105), higher values push toward M.\n6. perimeter: 0.7257 (0.1008), higher values push toward M.\n7. concavity: 0.6252 (0.0868), higher values push toward M.\n8. fractal_dim: 0.3086 (0.0429), higher values push toward B.\n9. symmetry: 0.1768 (0.0245), higher values push slightly toward M.\n10. compactness: 0.1568 (0.0218), higher values push slightly toward B.\n\nThe size and concavity features carry most of the signal, but they are collinear, so their individual shares are partly arbitrary. Figure: outputs/figures/all_features_shap_importance.png.\n\n## 6. Example predictions\n- Row 179 (confident correct, true M, predicted M with probability 1.0): concave_points 0.1878 (99.6th percentile, +6.4373), area 2250 (+5.1367), radius 27.22 and perimeter 182.1 (both at the 99.6th percentile). Very large size and concave-point values drove a strong malignant prediction.\n- Row 374 (borderline, true B, predicted B with probability 0.5201): texture 16.07 (23.1st percentile, -1.1249) pulled toward B, while radius 16.17, perimeter 106.3 and area 788.5 (all above the 76th percentile) pushed toward M. The prediction is close to a coin flip.\n- Row 39 (confident misclassification, true M, predicted B with probability 0.9596): concave_points 0.02031 (25.8th percentile, -1.3148) and smoothness 0.08162 (15.4th percentile, -1.2626) pushed strongly toward B. Texture 21.58 (+0.7408) pushed toward M but was not enough.\n- Row 127 (misclassified, true B, predicted M with probability 0.9181): concave_points 0.08534 (81.1st percentile, +1.695) and smoothness 0.115 (90.7th percentile, +1.6629) pushed toward M. Texture 16.39 (-1.0165) partly offset this.\n\n## 7. Caveats\n- SHAP splits credit arbitrarily between correlated features, so per-feature shares for the size and concavity families should be read as a group, not as independent effects.\n- A linear logistic model cannot capture interactions or non-linear thresholds.\n- The validation set has 114 rows, so each error changes validation accuracy by about 0.9 points. Differences of under 0.01 between runs are not meaningful on their own.\n- The class balance (about 63% benign) means accuracy alone can flatter the model, so balanced accuracy and AUC are reported alongside it.\n- Skewed features were standardized but not log-transformed, which may affect linear fit on the long right tails of area and concavity.\n- Coefficients and SHAP values are on the standardized scale and in log-odds units, so they are not directly comparable to raw-unit effects.",
+    "key_findings": [
+      "The all_features model reaches CV accuracy 0.9383 ± 0.0126 and validation accuracy 0.9386, against a majority-class baseline of 0.6316.",
+      "Validation ROC-AUC is 0.9858 for all_features and 0.9818 for uncorrelated_features, with CV AUC agreeing closely.",
+      "Removing the four correlated features (concave_points, concavity, perimeter, radius) lowers CV accuracy by 0.0022 and validation accuracy by 0.0088, with per-fold differences of mixed sign within noise.",
+      "In the reduced model, area's SHAP share rises from 0.1215 to 0.414, since collinear features no longer share its credit.",
+      "Higher concave_points, texture, smoothness and size features push predictions toward malignant, while higher fractal_dim pushes toward benign.",
+      "all_features is recommended because it has higher accuracy and AUC on both CV and validation, although the uncorrelated run is a simpler alternative."
+    ],
+    "recommended_run": "all_features",
+    "prediction_explanation": "The model predicts malignancy mainly from concave_points, texture, smoothness and size features (area, radius, perimeter), where higher values push the prediction toward malignant. Concavity also contributes toward malignant, while higher fractal_dim pushes toward benign. Because the size and concavity features are strongly correlated, the exact credit each receives is partly arbitrary, though the overall direction of effects is consistent."
+  }
+}
