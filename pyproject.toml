@@ -1,7 +1,7 @@
 [project]
 name = "agenticcellmorph"
 version = "0.1.0"
-description = "Add your description here"
+description = "Performns statistical and predictive analysis on cell morphology tables."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
