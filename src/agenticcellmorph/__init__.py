@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 
+# Remove the banner from Pydantic runs
 os.environ.setdefault("PYDANTIC_AI_NO_BANNER", "1")
 
 import argparse  # noqa: E402
